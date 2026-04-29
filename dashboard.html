@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - RoyalNode</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-crown"></i>
+                <span>RoyalNode</span>
+            </div>
+            <nav>
+                <a href="#" class="active"><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="#"><i class="fas fa-server"></i> My Servers</a>
+                <a href="#"><i class="fas fa-credit-card"></i> Billing</a>
+                <a href="#"><i class="fas fa-ticket"></i> Support</a>
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+            </nav>
+            <div class="sidebar-footer">
+                <!-- GANTI LINK INI -->
+                <a href="https://lynk.id/USERNAME_ANDA" class="btn-upgrade-sidebar" target="_blank">
+                    <i class="fas fa-arrow-up"></i> Upgrade Plan
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1>Welcome back, <span class="gradient-text">User!</span></h1>
+                <div class="header-actions">
+                    <span class="credit">Balance: $0.00</span>
+                    <!-- GANTI LINK INI -->
+                    <a href="https://lynk.id/USERNAME_ANDA" class="btn-add-credit" target="_blank">
+                        <i class="fas fa-plus"></i> Add Credit via Lynk.id
+                    </a>
+                </div>
+            </header>
+
+            <div class="dashboard-cards">
+                <div class="dash-card">
+                    <div class="card-icon green"><i class="fas fa-server"></i></div>
+                    <div class="card-info">
+                        <span>Active Servers</span>
+                        <h3>0</h3>
+                    </div>
+                </div>
+                <div class="dash-card">
+                    <div class="card-icon blue"><i class="fas fa-clock"></i></div>
+                    <div class="card-info">
+                        <span>Uptime</span>
+                        <h3>0%</h3>
+                    </div>
+                </div>
+                <div class="dash-card">
+                    <div class="card-icon purple"><i class="fas fa-ticket"></i></div>
+                    <div class="card-info">
+                        <span>Open Tickets</span>
+                        <h3>0</h3>
+                    </div>
+                </div>
+                <div class="dash-card">
+                    <div class="card-icon orange"><i class="fas fa-credit-card"></i></div>
+                    <div class="card-info">
+                        <span>Due Invoices</span>
+                        <h3>0</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="server-section">
+                <h2>Your Servers</h2>
+                <div class="no-server">
+                    <i class="fas fa-server"></i>
+                    <p>No servers yet. <a href="pricing.html">Deploy your first server!</a></p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
