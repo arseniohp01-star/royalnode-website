@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AUTOCUAN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-cloud"></i>
+                <span>AUTOCUAN</span>
+            </div>
+            <nav>
+                <a href="#" class="active"><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="#"><i class="fas fa-coins"></i> Mining Aktif</a>
+                <a href="withdraw.html"><i class="fas fa-wallet"></i> Withdraw</a>
+                <a href="upgrade.html"><i class="fas fa-arrow-up"></i> Upgrade</a>
+                <a href="#"><i class="fas fa-users"></i> Tim</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="https://lynk.id/USERNAME_ANDA" class="btn-upgrade-sidebar" target="_blank">
+                    <i class="fas fa-crown"></i> Upgrade via Lynk.id
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1>Selamat datang, <span class="gradient-text" id="userName">User</span></h1>
+                <div class="balance-display">
+                    <span>Total Balance:</span>
+                    <h2>$0.55925</h2>
+                </div>
+            </header>
+
+            <div class="dashboard-cards">
+                <div class="dash-card">
+                    <div class="card-icon gold"><i class="fas fa-microchip"></i></div>
+                    <div class="card-info">
+                        <span>Mining Aktif</span>
+                        <h3>24/7</h3>
+                    </div>
+                </div>
+                <div class="dash-card">
+                    <div class="card-icon green"><i class="fas fa-percent"></i></div>
+                    <div class="card-info">
+                        <span>Progress Mining</span>
+                        <h3>88.5%</h3>
+                    </div>
+                </div>
+                <div class="dash-card">
+                    <div class="card-icon blue"><i class="fas fa-clock"></i></div>
+                    <div class="card-info">
+                        <span>Estimasi Profit</span>
+                        <h3>$128.45</h3>
+                    </div>
+                </div>
+                <div class="dash-card">
+                    <div class="card-icon purple"><i class="fas fa-gem"></i></div>
+                    <div class="card-info">
+                        <span>Node Asset</span>
+                        <h3>5.200+</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Check-in Harian -->
+            <div class="checkin-section">
+                <h3>Check-in Hari Ini</h3>
+                <div class="checkin-box">
+                    <i class="fas fa-gift"></i>
+                    <p>Buka kotak sekarang & dapatkan bonus harian!</p>
+                    <button onclick="alert('Bonus diklaim! +$0.05')">Klaim Hadiah</button>
+                </div>
+            </div>
+
+            <!-- Withdraw Preview -->
+            <div class="withdraw-preview">
+                <h3>Withdraw Cepat</h3>
+                <p>Saldo tersedia: <strong>$0.55925</strong></p>
+                <a href="withdraw.html" class="btn-withdraw">Tarik ke DANA / Bank</a>
+            </div>
+
+            <!-- Arsitektur Sistem dari dashboard -->
+            <div class="arsitektur-box">
+                <h3>Arsitektur Sistem</h3>
+                <div class="arsitektur-item">
+                    <i class="fas fa-cloud"></i>
+                    <h4>PHP Cloud Node</h4>
+                    <p>Arsitektur cloud yang efisien untuk mining tanpa henti.</p>
+                </div>
+                <div class="arsitektur-item">
+                    <i class="fas fa-vr-cardboard"></i>
+                    <h4>Rekreativa Vivid</h4>
+                    <p>Platform visual interaktif untuk monitoring real-time.</p>
+                </div>
+                <div class="arsitektur-item">
+                    <i class="fas fa-music"></i>
+                    <h4>Lirik Musik</h4>
+                    <p>Integrasi audio untuk kenyamanan mining.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Ambil user dari localStorage (simulasi)
+        const savedUser = localStorage.getItem('autocuan_user');
+        if (savedUser) {
+            document.getElementById('userName').textContent = savedUser;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - AUTOCUAN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cloud"></i>
+                <span>AUTOCUAN</span>
+            </a>
+            <div class="nav-actions">
+                <a href="dashboard.html" class="btn-login">Sudah punya akun?</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="register-page">
+        <div class="register-box">
+            <h2>Buat Akun Gratis</h2>
+            <p>Mulai mining sekarang & dapatkan Welcome Bonus $5</p>
+            
+            <form id="registerForm">
+                <label>ID Pengguna</label>
+                <div class="input-group">
+                    <span class="prefix">USR-</span>
+                    <input type="text" id="userId" placeholder="XXXXXX" maxlength="6" required>
+                </div>
+                <small>Buat ID unik 6 karakter (huruf/angka)</small>
+
+                <label>PIN Keamanan (6 digit)</label>
+                <input type="password" id="pin" placeholder="******" maxlength="6" required>
+                <small>PIN akan digunakan untuk otorisasi transaksi</small>
+
+                <label>Kode Undangan (opsional)</label>
+                <input type="text" id="referral" placeholder="Masukkan kode undangan">
+
+                <div class="agreement">
+                    <input type="checkbox" id="agree" required>
+                    <label for="agree">Saya telah membaca dan menyetujui <a href="#">Kebijakan Pendapatan</a></label>
+                </div>
+
+                <button type="submit" class="btn-submit">Daftar Sekarang</button>
+            </form>
+
+            <div class="success-message" id="successMsg" style="display:none;">
+                <h3>✅ Akun Berhasil Dibuat!</h3>
+                <p>ID Login Anda: <strong id="displayId"></strong></p>
+                <p>Simpan ID & PIN ini baik-baik.</p>
+                <button onclick="copyId()">Salin ID</button>
+                <a href="dashboard.html" class="btn-dashboard">Lanjut ke Dashboard</a>
+                <a href="https://lynk.id/USERNAME_ANDA" class="btn-upgrade-link" target="_blank">
+                    Upgrade Akun Premium via Lynk.id
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const userId = document.getElementById('userId').value.toUpperCase();
+            const pin = document.getElementById('pin').value;
+            if (userId.length === 6 && pin.length === 6) {
+                // Simulasi sukses
+                document.getElementById('displayId').textContent = 'USR-' + userId;
+                document.getElementById('registerForm').style.display = 'none';
+                document.getElementById('successMsg').style.display = 'block';
+                // Simpan ke localStorage (simulasi)
+                localStorage.setItem('autocuan_user', 'USR-' + userId);
+            } else {
+                alert('ID harus 6 karakter, PIN harus 6 digit.');
+            }
+        });
+
+        function copyId() {
+            const id = document.getElementById('displayId').textContent;
+            navigator.clipboard.writeText(id);
+            alert('ID disalin!');
+        }
+    </script>
+</body>
+</html>

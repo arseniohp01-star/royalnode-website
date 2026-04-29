@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw - AUTOCUAN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        .withdraw-container {
+            max-width: 600px;
+            margin: 100px auto 50px;
+            padding: 30px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            text-align: center;
+        }
+        .withdraw-container h2 { color: var(--accent); margin-bottom: 20px; }
+        .balance-info { font-size: 2rem; color: var(--accent); margin-bottom: 20px; }
+        .btn-withdraw-action {
+            display: inline-block;
+            padding: 14px 40px;
+            background: var(--gradient);
+            color: #000;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 700;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        .btn-withdraw-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(245,158,11,0.4);
+        }
+        .warning {
+            color: var(--text-secondary);
+            margin-top: 20px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="withdraw-container">
+        <h2>Tarik Saldo ke DANA / Bank</h2>
+        <p>Saldo Anda saat ini:</p>
+        <div class="balance-info">$0.55925</div>
+        <p>Minimal withdraw: $10.00</p>
+        <p>Untuk mengaktifkan fitur withdraw & menurunkan minimal, silakan upgrade akun Anda.</p>
+        <a href="https://lynk.id/USERNAME_ANDA" class="btn-withdraw-action" target="_blank">
+            <i class="fas fa-crown"></i> Upgrade via Lynk.id untuk Withdraw
+        </a>
+        <p class="warning">* Withdraw diproses 1x24 jam setelah upgrade</p>
+    </div>
+</body>
+</html>
